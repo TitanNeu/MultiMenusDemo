@@ -10,7 +10,7 @@ GenerateMultiLevelMenus::~GenerateMultiLevelMenus() {
 
 }
 
-std::vector<Menu *> GenerateMultiLevelMenus::buildMultiLevelMenu() {
+std::vector<Menu *>& GenerateMultiLevelMenus::buildMultiLevelMenu() {
     //存储根结点（菜单入口节点）
     std::vector<Menu*> rootMenus;
     //从allMenus找到一级菜单
@@ -34,7 +34,7 @@ std::vector<Menu *> GenerateMultiLevelMenus::buildMultiLevelMenu() {
     return rootMenus;
 }
 
-std::vector<Menu *> GenerateMultiLevelMenus::getSubMenus(std::string id, const std::vector<Menu *> &allMenus) {
+std::vector<Menu *>& GenerateMultiLevelMenus::getSubMenus(std::string id, const std::vector<Menu *> &allMenus) {
     std::vector<Menu*> subMenus;
     for(int i = 0; i < allMenus.size(); i++) {
         Menu* menu = allMenus[i];

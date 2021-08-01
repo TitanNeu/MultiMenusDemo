@@ -17,8 +17,8 @@ public:
     virtual ~GenerateMultiLevelMenus();
     GenerateMultiLevelMenus();
     GenerateMultiLevelMenus(const std::vector<Menu*> &allMenus);
-    std::vector<Menu*> buildMultiLevelMenu();
-    std::vector<Menu*> getSubMenus(std::string id, const std::vector<Menu*>& allMenus);
+    std::vector<Menu*>& buildMultiLevelMenu();
+    std::vector<Menu*>& getSubMenus(std::string id, const std::vector<Menu*>& allMenus);
 };
 
 
